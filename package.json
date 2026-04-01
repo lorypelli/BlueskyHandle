@@ -2,8 +2,10 @@
     "name": "bsky",
     "private": true,
     "scripts": {
-        "dev": "wrangler dev",
-        "prod": "wrangler deploy"
+        "wrangler:dev": "wrangler dev",
+        "wrangler:login": "wrangler login",
+        "wrangler:deploy": "wrangler deploy",
+        "prod": "pnpm wrangler:login && pnpm wrangler:deploy"
     },
     "devDependencies": {
         "@cloudflare/workers-types": "^4.20260401.1",
